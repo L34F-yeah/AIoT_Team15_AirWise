@@ -1,0 +1,51 @@
+# AirWise 規則庫（草稿）
+# 依台灣環境部「空氣品質指標(AQI)與健康影響/活動建議」整理。
+# TODO（組員）：逐條對照環境部空品監測網原文 https://airtw.moenv.gov.tw/ 後，把 verified 改成 true。
+
+version: 0.1
+source: "環境部空氣品質監測網 AQI 活動建議（待逐條核對）"
+
+levels:
+  - {id: L1, min: 0,   max: 50,  name: 良好,             color: green}
+  - {id: L2, min: 51,  max: 100, name: 普通,             color: yellow}
+  - {id: L3, min: 101, max: 150, name: 對敏感族群不健康, color: orange}
+  - {id: L4, min: 151, max: 200, name: 對所有族群不健康, color: red}
+  - {id: L5, min: 201, max: 300, name: 非常不健康,       color: purple}
+  - {id: L6, min: 301, max: 500, name: 危害,             color: maroon}
+
+groups: [general, sensitive, student]
+intensities: [light, moderate, vigorous]
+
+# action: ok | reduce | avoid | stay_indoor
+rules:
+  - {id: R-L1-all, level: L1, group: "*", intensity: "*", action: ok,
+     advice: "正常戶外活動。", verified: false}
+
+  - {id: R-L2-general, level: L2, group: general, intensity: "*", action: ok,
+     advice: "正常戶外活動。", verified: false}
+  - {id: R-L2-sensitive, level: L2, group: sensitive, intensity: "*", action: ok,
+     advice: "極特殊敏感族群注意是否出現咳嗽或呼吸急促等症狀，仍可正常戶外活動。", verified: false}
+
+  - {id: R-L3-general, level: L3, group: general, intensity: "*", action: ok,
+     advice: "如有眼痛、咳嗽或喉嚨痛等不適，考慮減少戶外活動。", verified: false}
+  - {id: R-L3-student-vigorous, level: L3, group: student, intensity: vigorous, action: reduce,
+     advice: "仍可戶外活動，但減少長時間劇烈運動。", verified: false}
+  - {id: R-L3-sensitive, level: L3, group: sensitive, intensity: "*", action: reduce,
+     advice: "減少體力消耗活動及戶外活動，必要外出應配戴口罩；氣喘者可能需增加使用吸入劑。", verified: false}
+
+  - {id: R-L4-general, level: L4, group: general, intensity: "*", action: reduce,
+     advice: "如有不適應減少體力消耗，特別是戶外活動。", verified: false}
+  - {id: R-L4-student, level: L4, group: student, intensity: "*", action: reduce,
+     advice: "避免長時間劇烈運動，戶外活動時增加休息。", verified: false}
+  - {id: R-L4-sensitive, level: L4, group: sensitive, intensity: "*", action: stay_indoor,
+     advice: "留在室內並減少體力消耗活動，必要外出應配戴口罩。", verified: false}
+
+  - {id: R-L5-general, level: L5, group: general, intensity: "*", action: avoid,
+     advice: "減少戶外活動。", verified: false}
+  - {id: R-L5-student, level: L5, group: student, intensity: "*", action: stay_indoor,
+     advice: "立即停止戶外活動，課程調整於室內進行。", verified: false}
+  - {id: R-L5-sensitive, level: L5, group: sensitive, intensity: "*", action: stay_indoor,
+     advice: "留在室內並避免體力消耗活動。", verified: false}
+
+  - {id: R-L6-all, level: L6, group: "*", intensity: "*", action: stay_indoor,
+     advice: "避免戶外活動，室內應緊閉門窗；必要外出應配戴口罩。", verified: false}
