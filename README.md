@@ -17,8 +17,8 @@ AirWise 會取得最近測站的即時空品與氣象預報、預測目標時段
 ## Installation
 
 ```bash
-git clone https://github.com/<your-account>/airwise-agent.git
-cd airwise-agent
+git clone https://github.com/L34F-yeah/AIoT_Team15_AirWise.git
+cd AIoT_Team15_AirWise
 python -m venv .venv && source .venv/bin/activate   # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 pip install -e .
@@ -52,7 +52,7 @@ python eval/run_eval.py --qa eval/qa_set.jsonl
 ## Repository 結構
 
 ```
-airwise-agent/
+AIoT_Team15_AirWise/
 ├── README.md            專題介紹、安裝、執行、Demo
 ├── DESIGN.md            系統設計文件（持續更新）
 ├── requirements.txt
