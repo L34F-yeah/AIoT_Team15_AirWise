@@ -57,6 +57,15 @@ streamlit run app/main.py
 python eval/run_eval.py --qa eval/qa_set.jsonl
 ```
 
+## 專題文件
+
+| 文件 | 說明 |
+| --- | --- |
+| [論文草稿（IEEE Transactions 格式）](docs/paper/AirWise_IEEE_Transactions_draft.md) | 英文論文：Abstract、Index Terms、方法公式與定理、實驗設計、參考文獻（成果為預期目標，非實驗結果） |
+| [研究論述](docs/research/AirWise_研究論述_證據預期貢獻與摘要.pdf) | A–F 研究故事與證據、五項預期貢獻、學術價值、專業摘要 |
+| [A–Z SOP 專題解析](docs/az-sop-review/AirWise_AZ_SOP_專題解析.pdf) | 依規範與 A–Z SOP 逐項檢核缺口與補強清單 |
+| [A–Z 專題解析資訊圖表](docs/az-sop-review/AirWise_AZ_專題解析資訊圖表.pdf) | 上一份的一頁圖表版 |
+
 ## Repository 結構
 
 ```
@@ -70,7 +79,10 @@ AIoT_Team15_AirWise/
 ├── src/airwise/         agent、tools、forecast、rules、rag
 ├── eval/                qa_set.jsonl、評測腳本、結果
 ├── app/                 Streamlit 介面
-└── docs/                架構圖、流程圖、簡報
+└── docs/                專題文件（索引見 docs/README.md）
+    ├── paper/           IEEE Transactions 格式論文草稿
+    ├── research/        研究論述：證據、預期貢獻、摘要
+    └── az-sop-review/   依規範與 A–Z SOP 的檢核文件與資訊圖表
 ```
 
 ## Demo

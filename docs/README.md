@@ -15,5 +15,11 @@
 | [AirWise_AZ_SOP_專題解析.pdf](az-sop-review/AirWise_AZ_SOP_專題解析.pdf) | 逐項對照《期末專題提案作業規範》與《A–Z SOP》：各章缺口、四類文獻分類與比較表、PF 公式、PJ 實例走查、PM 定理、實驗設定、補強清單 | 修改 Proposal 各章時對照 |
 | [AirWise_AZ_專題解析資訊圖表.pdf](az-sop-review/AirWise_AZ_專題解析資訊圖表.pdf) | 上一份的一頁圖表版：38 個要素中 23 已具備、10 需補強、5 期末撰寫，含補強優先順序 | 組內快速對齊進度 |
 
+## paper/ — 論文草稿
+
+| 檔案 | 內容 | 用在哪裡 |
+| --- | --- | --- |
+| [AirWise_IEEE_Transactions_draft.md](paper/AirWise_IEEE_Transactions_draft.md) | 依上述文件整理的 IEEE Transactions 格式英文論文草稿（Abstract、Index Terms、I–VII 章、參考文獻） | 期末報告、投稿草稿 |
+
 > 注意：兩份文件中的數值（如 PJ 的 ŷ = 98、q = 15）是示意值，不是實驗結果；
 > 標「原研究」的參考文獻為新聞轉述，正式引用前要改引期刊原文。
