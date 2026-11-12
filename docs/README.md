@@ -6,6 +6,7 @@
 
 | 檔案 | 內容 | 用在哪裡 |
 | --- | --- | --- |
+| [AirWise_研究論述_證據預期貢獻與摘要.md](research/AirWise_研究論述_證據預期貢獻與摘要.md) | 下方 PDF 的 Markdown 版，可直接在 GitHub 閱讀、複製文字 | 同下方 PDF |
 | [AirWise_研究論述_證據預期貢獻與摘要.pdf](research/AirWise_研究論述_證據預期貢獻與摘要.pdf) | A–F 研究故事與證據、三個說服力面向、五項預期貢獻（C1–C5）、學術價值、專業摘要、14 筆參考文獻 | Abstract、Introduction、簡報開場、口試 |
 
 ## az-sop-review/ — 依規範與 A–Z SOP 的檢核
